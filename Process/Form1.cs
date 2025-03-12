@@ -16,5 +16,20 @@ namespace Process
         {
             InitializeComponent();
         }
+
+        private void NumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
