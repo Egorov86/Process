@@ -32,21 +32,26 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnSave_Click = new System.Windows.Forms.ToolStripButton();
+            this.btnLoad_Click = new System.Windows.Forms.ToolStripButton();
+            this.txtYear = new System.Windows.Forms.NumericUpDown();
+            this.txtManufacturer = new System.Windows.Forms.ComboBox();
+            this.txtCountry = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSlot = new System.Windows.Forms.TextBox();
+            this.txtCores = new System.Windows.Forms.TextBox();
+            this.txtCacheL3 = new System.Windows.Forms.TextBox();
+            this.txtFrequency = new System.Windows.Forms.TextBox();
+            this.txtTechProcess = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,26 +60,35 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtPoints = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.chkIsOnSale = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtWarrantyPeriod = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpProductionDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.СomboBox = new System.Windows.Forms.ComboBox();
-            this.NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLoad_Click_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSave_Click_1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYear)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).BeginInit();
+            this.menuStrip.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -103,15 +117,16 @@
             // panel
             // 
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.Controls.Add(this.NumericUpDown);
-            this.panel.Controls.Add(this.СomboBox);
-            this.panel.Controls.Add(this.textBox4);
+            this.panel.Controls.Add(this.toolStrip1);
+            this.panel.Controls.Add(this.txtYear);
+            this.panel.Controls.Add(this.txtManufacturer);
+            this.panel.Controls.Add(this.txtCountry);
             this.panel.Controls.Add(this.label5);
             this.panel.Controls.Add(this.label4);
-            this.panel.Controls.Add(this.textBox3);
+            this.panel.Controls.Add(this.txtModel);
             this.panel.Controls.Add(this.label3);
             this.panel.Controls.Add(this.label2);
-            this.panel.Controls.Add(this.textBox1);
+            this.panel.Controls.Add(this.txtName);
             this.panel.Controls.Add(this.label1);
             this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel.ForeColor = System.Drawing.Color.Black;
@@ -120,12 +135,73 @@
             this.panel.Size = new System.Drawing.Size(763, 385);
             this.panel.TabIndex = 0;
             // 
-            // textBox4
+            // toolStrip1
             // 
-            this.textBox4.Location = new System.Drawing.Point(403, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 20);
-            this.textBox4.TabIndex = 8;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSave_Click,
+            this.btnLoad_Click});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 360);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(763, 25);
+            this.toolStrip1.TabIndex = 12;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnSave_Click
+            // 
+            this.btnSave_Click.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave_Click.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave_Click.Name = "btnSave_Click";
+            this.btnSave_Click.RightToLeftAutoMirrorImage = true;
+            this.btnSave_Click.Size = new System.Drawing.Size(70, 22);
+            this.btnSave_Click.Text = "Сохранить";
+            this.btnSave_Click.Click += new System.EventHandler(this.btnSave_Click_Click);
+            // 
+            // btnLoad_Click
+            // 
+            this.btnLoad_Click.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnLoad_Click.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLoad_Click.Name = "btnLoad_Click";
+            this.btnLoad_Click.Size = new System.Drawing.Size(65, 22);
+            this.btnLoad_Click.Text = "Загрузить";
+            this.btnLoad_Click.Click += new System.EventHandler(this.btnLoad_Click_Click);
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(510, 37);
+            this.txtYear.Maximum = new decimal(new int[] {
+            2025,
+            0,
+            0,
+            0});
+            this.txtYear.Minimum = new decimal(new int[] {
+            1971,
+            0,
+            0,
+            0});
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(68, 20);
+            this.txtYear.TabIndex = 11;
+            this.txtYear.Value = new decimal(new int[] {
+            1971,
+            0,
+            0,
+            0});
+            // 
+            // txtManufacturer
+            // 
+            this.txtManufacturer.FormattingEnabled = true;
+            this.txtManufacturer.Location = new System.Drawing.Point(170, 33);
+            this.txtManufacturer.Name = "txtManufacturer";
+            this.txtManufacturer.Size = new System.Drawing.Size(121, 21);
+            this.txtManufacturer.TabIndex = 10;
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Location = new System.Drawing.Point(403, 36);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(68, 20);
+            this.txtCountry.TabIndex = 8;
             // 
             // label5
             // 
@@ -145,12 +221,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Страна";
             // 
-            // textBox3
+            // txtModel
             // 
-            this.textBox3.Location = new System.Drawing.Point(302, 36);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(42, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtModel.Location = new System.Drawing.Point(302, 36);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(42, 20);
+            this.txtModel.TabIndex = 5;
             // 
             // label3
             // 
@@ -170,12 +246,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Производитель";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtName.Location = new System.Drawing.Point(15, 36);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(80, 20);
+            this.txtName.TabIndex = 1;
             // 
             // label1
             // 
@@ -200,11 +276,11 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtSlot);
+            this.panel1.Controls.Add(this.txtCores);
+            this.panel1.Controls.Add(this.txtCacheL3);
+            this.panel1.Controls.Add(this.txtFrequency);
+            this.panel1.Controls.Add(this.txtTechProcess);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -215,40 +291,40 @@
             this.panel1.Size = new System.Drawing.Size(765, 385);
             this.panel1.TabIndex = 0;
             // 
-            // textBox9
+            // txtSlot
             // 
-            this.textBox9.Location = new System.Drawing.Point(428, 43);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(38, 20);
-            this.textBox9.TabIndex = 10;
+            this.txtSlot.Location = new System.Drawing.Point(428, 43);
+            this.txtSlot.Name = "txtSlot";
+            this.txtSlot.Size = new System.Drawing.Size(38, 20);
+            this.txtSlot.TabIndex = 10;
             // 
-            // textBox8
+            // txtCores
             // 
-            this.textBox8.Location = new System.Drawing.Point(349, 43);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(30, 20);
-            this.textBox8.TabIndex = 9;
+            this.txtCores.Location = new System.Drawing.Point(349, 43);
+            this.txtCores.Name = "txtCores";
+            this.txtCores.Size = new System.Drawing.Size(30, 20);
+            this.txtCores.TabIndex = 9;
             // 
-            // textBox7
+            // txtCacheL3
             // 
-            this.textBox7.Location = new System.Drawing.Point(222, 44);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(80, 20);
-            this.textBox7.TabIndex = 8;
+            this.txtCacheL3.Location = new System.Drawing.Point(222, 44);
+            this.txtCacheL3.Name = "txtCacheL3";
+            this.txtCacheL3.Size = new System.Drawing.Size(80, 20);
+            this.txtCacheL3.TabIndex = 8;
             // 
-            // textBox6
+            // txtFrequency
             // 
-            this.textBox6.Location = new System.Drawing.Point(117, 44);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(61, 20);
-            this.textBox6.TabIndex = 7;
+            this.txtFrequency.Location = new System.Drawing.Point(117, 44);
+            this.txtFrequency.Name = "txtFrequency";
+            this.txtFrequency.Size = new System.Drawing.Size(61, 20);
+            this.txtFrequency.TabIndex = 7;
             // 
-            // textBox5
+            // txtTechProcess
             // 
-            this.textBox5.Location = new System.Drawing.Point(21, 44);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(69, 20);
-            this.textBox5.TabIndex = 6;
+            this.txtTechProcess.Location = new System.Drawing.Point(21, 44);
+            this.txtTechProcess.Name = "txtTechProcess";
+            this.txtTechProcess.Size = new System.Drawing.Size(69, 20);
+            this.txtTechProcess.TabIndex = 6;
             // 
             // label10
             // 
@@ -310,14 +386,14 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.textBox12);
-            this.panel2.Controls.Add(this.textBox11);
-            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.txtPoints);
+            this.panel2.Controls.Add(this.txtPrice);
+            this.panel2.Controls.Add(this.chkIsOnSale);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.textBox10);
+            this.panel2.Controls.Add(this.txtWarrantyPeriod);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpProductionDate);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Location = new System.Drawing.Point(8, 7);
             this.panel2.Name = "panel2";
@@ -333,29 +409,29 @@
             this.label15.TabIndex = 9;
             this.label15.Text = "Акция";
             // 
-            // textBox12
+            // txtPoints
             // 
-            this.textBox12.Location = new System.Drawing.Point(417, 43);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(37, 20);
-            this.textBox12.TabIndex = 8;
+            this.txtPoints.Location = new System.Drawing.Point(417, 43);
+            this.txtPoints.Name = "txtPoints";
+            this.txtPoints.Size = new System.Drawing.Size(37, 20);
+            this.txtPoints.TabIndex = 8;
             // 
-            // textBox11
+            // txtPrice
             // 
-            this.textBox11.Location = new System.Drawing.Point(339, 44);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(45, 20);
-            this.textBox11.TabIndex = 7;
+            this.txtPrice.Location = new System.Drawing.Point(339, 44);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(45, 20);
+            this.txtPrice.TabIndex = 7;
             // 
-            // checkBox1
+            // chkIsOnSale
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(497, 43);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 17);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Акция";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkIsOnSale.AutoSize = true;
+            this.chkIsOnSale.Location = new System.Drawing.Point(497, 43);
+            this.chkIsOnSale.Name = "chkIsOnSale";
+            this.chkIsOnSale.Size = new System.Drawing.Size(57, 17);
+            this.chkIsOnSale.TabIndex = 6;
+            this.chkIsOnSale.Text = "Акция";
+            this.chkIsOnSale.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -375,12 +451,12 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Цена";
             // 
-            // textBox10
+            // txtWarrantyPeriod
             // 
-            this.textBox10.Location = new System.Drawing.Point(199, 43);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 3;
+            this.txtWarrantyPeriod.Location = new System.Drawing.Point(199, 43);
+            this.txtWarrantyPeriod.Name = "txtWarrantyPeriod";
+            this.txtWarrantyPeriod.Size = new System.Drawing.Size(100, 20);
+            this.txtWarrantyPeriod.TabIndex = 3;
             // 
             // label12
             // 
@@ -391,12 +467,12 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Гарантийный срок";
             // 
-            // dateTimePicker1
+            // dtpProductionDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(21, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(140, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpProductionDate.Location = new System.Drawing.Point(21, 44);
+            this.dtpProductionDate.Name = "dtpProductionDate";
+            this.dtpProductionDate.Size = new System.Drawing.Size(140, 20);
+            this.dtpProductionDate.TabIndex = 1;
             // 
             // label11
             // 
@@ -409,48 +485,78 @@
             // 
             // menuStrip
             // 
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem6});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(788, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "Файл";
             // 
-            // СomboBox
+            // toolStripMenuItem1
             // 
-            this.СomboBox.FormattingEnabled = true;
-            this.СomboBox.Location = new System.Drawing.Point(170, 33);
-            this.СomboBox.Name = "СomboBox";
-            this.СomboBox.Size = new System.Drawing.Size(121, 21);
-            this.СomboBox.TabIndex = 10;
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLoad_Click_1,
+            this.btnSave_Click_1,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.toolStripMenuItem1.Text = "Файл";
             // 
-            // NumericUpDown
+            // btnLoad_Click_1
             // 
-            this.NumericUpDown.Location = new System.Drawing.Point(510, 37);
-            this.NumericUpDown.Maximum = new decimal(new int[] {
-            2025,
-            0,
-            0,
-            0});
-            this.NumericUpDown.Minimum = new decimal(new int[] {
-            1971,
-            0,
-            0,
-            0});
-            this.NumericUpDown.Name = "NumericUpDown";
-            this.NumericUpDown.Size = new System.Drawing.Size(68, 20);
-            this.NumericUpDown.TabIndex = 11;
-            this.NumericUpDown.Value = new decimal(new int[] {
-            1971,
-            0,
-            0,
-            0});
-            this.NumericUpDown.ValueChanged += new System.EventHandler(this.NumericUpDown_ValueChanged);
+            this.btnLoad_Click_1.Name = "btnLoad_Click_1";
+            this.btnLoad_Click_1.Size = new System.Drawing.Size(133, 22);
+            this.btnLoad_Click_1.Text = "Загрузить";
+            // 
+            // btnSave_Click_1
+            // 
+            this.btnSave_Click_1.Name = "btnSave_Click_1";
+            this.btnSave_Click_1.Size = new System.Drawing.Size(133, 22);
+            this.btnSave_Click_1.Text = "Сохранить";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItem4.Text = "Выход";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItem5.Text = "Справка";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(94, 20);
+            this.toolStripMenuItem6.Text = "О программе";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 445);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(788, 22);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(45, 17);
+            this.toolStripStatusLabel.Text = "Готово";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 450);
+            this.ClientSize = new System.Drawing.Size(788, 467);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -461,13 +567,19 @@
             this.tabPage1.ResumeLayout(false);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYear)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).EndInit();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,19 +593,19 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCountry;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtSlot;
+        private System.Windows.Forms.TextBox txtCores;
+        private System.Windows.Forms.TextBox txtCacheL3;
+        private System.Windows.Forms.TextBox txtFrequency;
+        private System.Windows.Forms.TextBox txtTechProcess;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -501,18 +613,29 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtPoints;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.CheckBox chkIsOnSale;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtWarrantyPeriod;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpProductionDate;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.NumericUpDown NumericUpDown;
-        private System.Windows.Forms.ComboBox СomboBox;
+        private System.Windows.Forms.NumericUpDown txtYear;
+        private System.Windows.Forms.ComboBox txtManufacturer;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem btnLoad_Click_1;
+        private System.Windows.Forms.ToolStripMenuItem btnSave_Click_1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnSave_Click;
+        private System.Windows.Forms.ToolStripButton btnLoad_Click;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
     }
 }
 

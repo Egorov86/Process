@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Process
 {
@@ -17,19 +19,68 @@ namespace Process
             InitializeComponent();
         }
 
-        private void NumericUpDown_ValueChanged(object sender, EventArgs e)
+        private void btnSave_Click_Click(object sender, EventArgs e)
         {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "JSON files (*.json)|*.json";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    var processor = new Processor
+                    {
+                        Name = txtName.Text,
+                        Manufacturer = txtManufacturer.Text,
+                        Model = txtModel.Text,
+                        Country = txtCountry.Text,
+                        Year = int.Parse(txtYear.Text),
+                        TechProcess = txtTechProcess.Text,
+                        Frequency = double.Parse(txtFrequency.Text),
+                        CacheL3 = double.Parse(txtCacheL3.Text),
+                        Cores = int.Parse(txtCores.Text),
+                        Slot = txtSlot.Text,
+                        ProductionDate = dtpProductionDate.Value,
+                        WarrantyPeriod = int.Parse(txtWarrantyPeriod.Text),
+                        Price = decimal.Parse(txtPrice.Text),
+                        Points = int.Parse(txtPoints.Text),
+                        IsOnSale = chkIsOnSale.Checked
+                    };
 
+                    string json = JsonConvert.SerializeObject(processor);
+                    File.WriteAllText(saveFileDialog.FileName, json);
+                    toolStripStatusLabel.Text = "Данные сохранены!";
+                }
+            }
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btnLoad_Click_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "JSON files (*.json)|*.json";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string json = File.ReadAllText(openFileDialog.FileName);
+                    var processor = JsonConvert.DeserializeObject<Processor>(json);
 
-        }
+                    txtName.Text = processor.Name;
+                    txtManufacturer.Text = processor.Manufacturer;
+                    txtModel.Text = processor.Model;
+                    txtCountry.Text = processor.Country;
+                    txtYear.Text = processor.Year.ToString();
+                    txtTechProcess.Text = processor.TechProcess;
+                    txtFrequency.Text = processor.Frequency.ToString();
+                    txtCacheL3.Text = processor.CacheL3.ToString();
+                    txtCores.Text = processor.Cores.ToString();
+                    txtSlot.Text = processor.Slot;
+                    dtpProductionDate.Value = processor.ProductionDate;
+                    txtWarrantyPeriod.Text = processor.WarrantyPeriod.ToString();
+                    txtPrice.Text = processor.Price.ToString();
+                    txtPoints.Text = processor.Points.ToString();
+                    chkIsOnSale.Checked = processor.IsOnSale;
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
+                    toolStripStatusLabel.Text = "Данные загружены!";
+                }
+            }
         }
     }
 }
