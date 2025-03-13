@@ -538,26 +538,28 @@
             // btnLoad_Click_1
             // 
             this.btnLoad_Click_1.Name = "btnLoad_Click_1";
-            this.btnLoad_Click_1.Size = new System.Drawing.Size(133, 22);
+            this.btnLoad_Click_1.Size = new System.Drawing.Size(180, 22);
             this.btnLoad_Click_1.Text = "Загрузить";
             // 
             // btnSave_Click_1
             // 
             this.btnSave_Click_1.Name = "btnSave_Click_1";
-            this.btnSave_Click_1.Size = new System.Drawing.Size(133, 22);
+            this.btnSave_Click_1.Size = new System.Drawing.Size(180, 22);
             this.btnSave_Click_1.Text = "Сохранить";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem4.Text = "Выход";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem5.Text = "Справка";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 

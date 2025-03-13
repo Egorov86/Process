@@ -59,7 +59,7 @@ namespace Process
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "JSON files (*.json)|*.json";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                /*if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string json = File.ReadAllText(openFileDialog.FileName);
                     //var Processor = JsonConvert.DeserializeObject<Processor>(json);
@@ -83,13 +83,25 @@ namespace Process
                     chkIsOnSale.Checked = processor.IsOnSale;
 
                     toolStrip1.Text = "Данные загружены!";
-                }
+                }*/
             }
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Выполнил студент\n Егоров Евгений \n г. Магнитогорск \n Академия TOP");
+            Form2 About = new Form2();
+            About.ShowDialog();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Form2 About = new Form2();
+            About.ShowDialog();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
