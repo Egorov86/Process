@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
@@ -15,9 +16,16 @@ namespace Process
 {
     public partial class Form1 : Form
     {
+        OpenFileDialog Loader = new OpenFileDialog();
+        SaveFileDialog saver = new SaveFileDialog();
+        List<string> txtManufacturers = new List<string>();
         public Form1()
         {
             InitializeComponent();
+            var txtManufacturers = new ObservableCollection<string>();
+            //var txtManufacturers = new ObservableCollection<string>(["INTEL", "AMD"]);
+            txtManufacturer.Items.Clear();
+            //txtManufacturer.ItemsSource = txtManufacturers;
         }
 
         private void btnSave_Click_Click(object sender, EventArgs e)
@@ -59,12 +67,12 @@ namespace Process
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "JSON files (*.json)|*.json";
-                /*if (openFileDialog.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string json = File.ReadAllText(openFileDialog.FileName);
+                    /*var processor = JsonConvert.DeserializeObject<Processor>(json);
                     //var Processor = JsonConvert.DeserializeObject<Processor>(json);
-                    
-                    var processor = JsonConvert.DeserializeObject<Processor>(json);
+                    //var processor = JsonConvert.DeserializeObject<Processor>(json);
 
                     txtName.Text = processor.Name;
                     txtManufacturer.Text = processor.Manufacturer;
@@ -82,8 +90,8 @@ namespace Process
                     txtPoints.Text = processor.Points.ToString();
                     chkIsOnSale.Checked = processor.IsOnSale;
 
-                    toolStrip1.Text = "Данные загружены!";
-                }*/
+                    toolStrip1.Text = "Данные загружены!";*/
+                }
             }
         }
 
