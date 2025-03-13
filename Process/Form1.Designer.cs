@@ -32,6 +32,7 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnSave_Click = new System.Windows.Forms.ToolStripButton();
             this.btnLoad_Click = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.txtSlot = new System.Windows.Forms.TextBox();
             this.txtCores = new System.Windows.Forms.TextBox();
             this.txtCacheL3 = new System.Windows.Forms.TextBox();
@@ -59,6 +61,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPoints = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
@@ -117,6 +120,7 @@
             // panel
             // 
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.Controls.Add(this.panel3);
             this.panel.Controls.Add(this.toolStrip1);
             this.panel.Controls.Add(this.txtYear);
             this.panel.Controls.Add(this.txtManufacturer);
@@ -134,6 +138,14 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(763, 385);
             this.panel.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.Location = new System.Drawing.Point(628, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(132, 93);
+            this.panel3.TabIndex = 13;
             // 
             // toolStrip1
             // 
@@ -276,6 +288,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtSlot);
             this.panel1.Controls.Add(this.txtCores);
             this.panel1.Controls.Add(this.txtCacheL3);
@@ -290,6 +303,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(765, 385);
             this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.Location = new System.Drawing.Point(630, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(132, 93);
+            this.panel4.TabIndex = 14;
             // 
             // txtSlot
             // 
@@ -385,6 +406,7 @@
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.txtPoints);
             this.panel2.Controls.Add(this.txtPrice);
@@ -399,6 +421,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(763, 385);
             this.panel2.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.Location = new System.Drawing.Point(628, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(132, 93);
+            this.panel5.TabIndex = 14;
             // 
             // label15
             // 
@@ -534,6 +564,7 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(94, 20);
             this.toolStripMenuItem6.Text = "О программе";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // statusStrip1
             // 
@@ -636,6 +667,9 @@
         private System.Windows.Forms.ToolStripButton btnLoad_Click;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 
