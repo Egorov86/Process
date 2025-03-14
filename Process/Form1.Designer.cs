@@ -538,26 +538,28 @@
             // btnLoad_Click_1
             // 
             this.btnLoad_Click_1.Name = "btnLoad_Click_1";
-            this.btnLoad_Click_1.Size = new System.Drawing.Size(180, 22);
+            this.btnLoad_Click_1.Size = new System.Drawing.Size(133, 22);
             this.btnLoad_Click_1.Text = "Загрузить";
+            this.btnLoad_Click_1.Click += new System.EventHandler(this.OpenFileDialog);
             // 
             // btnSave_Click_1
             // 
             this.btnSave_Click_1.Name = "btnSave_Click_1";
-            this.btnSave_Click_1.Size = new System.Drawing.Size(180, 22);
+            this.btnSave_Click_1.Size = new System.Drawing.Size(133, 22);
             this.btnSave_Click_1.Text = "Сохранить";
+            this.btnSave_Click_1.Click += new System.EventHandler(this.SaveFileDialog);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(133, 22);
             this.toolStripMenuItem4.Text = "Выход";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(133, 22);
             this.toolStripMenuItem5.Text = "Справка";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
@@ -581,8 +583,8 @@
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(45, 17);
-            this.toolStripStatusLabel.Text = "Готово";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(89, 17);
+            this.toolStripStatusLabel.Text = "Загружаемся...";
             // 
             // Form1
             // 

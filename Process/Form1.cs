@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Newtonsoft.Json;
 
 namespace Process
 {
@@ -22,9 +23,15 @@ namespace Process
         public Form1()
         {
             InitializeComponent();
+            txtManufacturer.Items.Add("Intel");
+            txtManufacturer.Items.Add("AMD");
+            txtManufacturer.Items.Add("Эльбрус");
+            txtManufacturer.SelectedIndex = 0;
             var txtManufacturers = new ObservableCollection<string>();
+            
             //var txtManufacturers = new ObservableCollection<string>(["INTEL", "AMD"]);
-            txtManufacturer.Items.Clear();
+            //txtManufacturer.Items.Clear();
+            //txtManufacturer.ItemsSource = txtManufacturers;
             //txtManufacturer.ItemsSource = txtManufacturers;
         }
 
@@ -54,8 +61,8 @@ namespace Process
                         IsOnSale = chkIsOnSale.Checked
                     };
 
-                    //string json = JsonConvert.SerializeObject(processor);
-                    //File.WriteAllText(saveFileDialog.FileName, json);
+                    string json = JsonConvert.SerializeObject(processor);
+                    File.WriteAllText(saveFileDialog.FileName, json);
                     toolStrip1.Text = "Данные сохранены!";
 
                 }
@@ -70,9 +77,8 @@ namespace Process
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string json = File.ReadAllText(openFileDialog.FileName);
-                    /*var processor = JsonConvert.DeserializeObject<Processor>(json);
-                    //var Processor = JsonConvert.DeserializeObject<Processor>(json);
-                    //var processor = JsonConvert.DeserializeObject<Processor>(json);
+                    var processor = JsonConvert.DeserializeObject<Processor>(json);
+                    
 
                     txtName.Text = processor.Name;
                     txtManufacturer.Text = processor.Manufacturer;
@@ -90,7 +96,7 @@ namespace Process
                     txtPoints.Text = processor.Points.ToString();
                     chkIsOnSale.Checked = processor.IsOnSale;
 
-                    toolStrip1.Text = "Данные загружены!";*/
+                    toolStrip1.Text = "Данные загружены!";
                 }
             }
         }
@@ -111,10 +117,20 @@ namespace Process
         {
             Close();
         }
+
+        private void SaveFileDialog(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenFileDialog(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
-public class Processor
+public class Processor   // на будущее для базы данных
 {
     public int Id { get; set; }                  //id
     public string Name { get; set; }             //название
